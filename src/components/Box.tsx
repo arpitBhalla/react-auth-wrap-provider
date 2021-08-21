@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { IndexType } from "../types/IndexType";
 import { useIndex } from "../hooks/useIndex";
 import { generateColor } from "../utils/generateColor";
+import { SIZE } from "../core/constants";
 
 type DivType = {
   backgroundColor?: string;
@@ -10,8 +11,8 @@ type DivType = {
 
 const Div = styled.div<DivType>`
   display: block;
-  width: 80px;
-  height: 80px;
+  width: ${SIZE}px;
+  height: ${SIZE}px;
   background-color: ${(props) => props.backgroundColor};
 `;
 

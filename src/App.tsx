@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useDimensions } from "./hooks/useDimensions";
 import { DefaultIndex, IndexContext } from "./context/IndexContext";
 import { IndexType } from "./types/IndexType";
+import { SIZE } from "./core/constants";
 
 const Container = styled.div`
   display: flex;
@@ -15,8 +16,9 @@ const Container = styled.div`
 function App() {
   const { height, width } = useDimensions();
   const [state, setState] = React.useState(DefaultIndex);
-  const maxRows = React.useMemo(() => Math.floor(width / 80), [width]);
-  const maxColumn = React.useMemo(() => Math.floor(height / 80), [height]);
+
+  const maxRows = React.useMemo(() => Math.floor(width / SIZE), [width]);
+  const maxColumn = React.useMemo(() => Math.floor(height / SIZE), [height]);
 
   const updateCell = React.useCallback(
     ({ x: row, y: column }: IndexType) => {
