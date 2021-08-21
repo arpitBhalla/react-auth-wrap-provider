@@ -22,12 +22,16 @@ function App() {
 
   const updateCell = React.useCallback(
     ({ x: row, y: column }: IndexType) => {
-      const direction = Math.floor(Math.random() * 100 - 50) % 2;
       if (row && column && row !== maxRows - 1 && column !== maxColumn - 1) {
+        // random direction
+        const direction = Math.floor(Math.random() * 100 - 50) % 2;
+        // non boundary cells
         setState({ x: row + direction, y: column + +!direction });
       } else if (row >= maxRows - 1) {
+        // rightmost column
         setState({ x: row - 1, y: column });
       } else {
+        // leftmost column
         setState({ x: row + 1, y: column });
       }
     },
