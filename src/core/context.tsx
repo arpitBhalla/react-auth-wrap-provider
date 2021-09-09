@@ -1,11 +1,11 @@
 import React from "react";
-import { TState, TAuthContext } from "./types";
+import { StateType, AuthContextType } from "./types";
 
-export const STATE: TState = {
+export const STATE: StateType = {
   isLoggedIn: false,
 };
 
-export const AuthContext = React.createContext<TAuthContext>({
+export const AuthContext = React.createContext<AuthContextType>({
   state: STATE,
   dispatch: () => {},
 });

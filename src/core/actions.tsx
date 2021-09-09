@@ -1,10 +1,10 @@
-import { TReducerAction, TUser } from "./types";
+import { ReducerActionType, UserType } from "./types";
 
-export const loginAction = (user: TUser): TReducerAction => ({
+export const loginAction = (user: UserType): ReducerActionType => ({
   type: "LOGIN",
   payload: user,
 });
 
-export const logoutAction = (): TReducerAction => ({
+export const logoutAction = (): ReducerActionType => ({
   type: "LOGOUT",
 });

@@ -1,23 +1,23 @@
 import React from "react";
 
-export type TUser = {
+export type UserType = {
   displayName: string;
   email: string;
 };
 
-export type TState = {
+export type StateType = {
   isLoggedIn: boolean;
-  user?: TUser;
+  user?: UserType;
 };
 
-export type TActions = "LOGIN" | "LOGOUT";
+export type ActionType = "LOGIN" | "LOGOUT";
 
-export type TReducerAction = {
-  type: TActions;
-  payload?: TUser;
+export type ReducerActionType = {
+  type: ActionType;
+  payload?: UserType;
 };
 
-export type TAuthContext = {
-  dispatch: React.Dispatch<TReducerAction>;
-  state: TState;
+export type AuthContextType = {
+  dispatch: React.Dispatch<ReducerActionType>;
+  state: StateType;
 };

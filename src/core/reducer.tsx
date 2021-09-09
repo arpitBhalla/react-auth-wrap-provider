@@ -1,8 +1,8 @@
 import React from "react";
-import { TState, TReducerAction } from "./types";
+import { StateType, ReducerActionType } from "./types";
 import { STATE } from "./context";
 
-export const reducer: React.Reducer<TState, TReducerAction> = (
+export const reducer: React.Reducer<StateType, ReducerActionType> = (
   state,
   action
 ) => {
