@@ -1,6 +1,10 @@
-import { ProtectedAuth } from "./components/ProtectedAuth";
-import { useDispatch, useSelector } from "./core/hooks";
-import { loginAction, logoutAction } from "./core/actions";
+import {
+  ProtectedAuth,
+  useDispatch,
+  useSelector,
+  loginAction,
+  logoutAction,
+} from "./lib";
 
 const App = (): JSX.Element => {
   const { isLoggedIn, user } = useSelector();
